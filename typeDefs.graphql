@@ -48,10 +48,13 @@ type Query {
   sakes: [Sake!]
   sake(id: Int!): Sake
   wishList: [Sake!]!
+  tastedList: [Sake!]!
   me: User
 }
 
 type Mutation {
   addWishSake(id: Int!): [Sake!]!
   removeWishSake(id: Int!): [Sake!]!
+  addTastedSake(id: Int!): [Sake!]!
+  removeTastedSake(id: Int!): [Sake!]!
 }
