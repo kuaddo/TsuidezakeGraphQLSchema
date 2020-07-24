@@ -34,6 +34,29 @@ type Sake {
   region: String!
 }
 
+input SakeInput {
+  id: Int!
+  name: String!
+  tags: [TagInput!]!
+  brewer: String
+  description: String
+  imgPath: String
+  isSuitAtHotTemp: Boolean!
+  isSuitAtWarmTemp: Boolean!
+  isSuitAtRoomTemp: Boolean!
+  isSuitAtColdTemp: Boolean!
+  isSuitOnTheRock: Boolean!
+  isGoodWithMeatProd: Boolean!
+  isGoodWithSeafoodProd: Boolean!
+  isGoodWithDairyProd: Boolean!
+  isGoodWithDryProd: Boolean!
+  region: String!
+}
+
+input TagInput {
+  name: String!
+}
+
 type Tag {
   id: Int
   name: String
@@ -53,6 +76,7 @@ type Query {
 }
 
 type Mutation {
+  addSake(input: SakeInput!): Sake
   addWishSake(id: Int!): [Sake!]!
   removeWishSake(id: Int!): [Sake!]!
   addTastedSake(id: Int!): [Sake!]!
