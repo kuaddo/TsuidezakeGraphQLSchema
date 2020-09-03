@@ -45,6 +45,11 @@ type RankingContent {
   sake: Sake!
 }
 
+type TastedSake {
+  sakeid: Int!
+  stars: Int!
+}
+
 input SakeInput {
   id: Int!
   name: String!
@@ -66,6 +71,11 @@ input SakeInput {
 
 input TagInput {
   name: String!
+}
+
+input TastedSakeInput {
+  sakeid: Int!
+  stars: Int!
 }
 
 type Tag {
@@ -92,5 +102,6 @@ type Mutation {
   addWishSake(id: Int!): [Sake!]!
   removeWishSake(id: Int!): [Sake!]!
   addTastedSake(id: Int!): [Sake!]!
+  addTastedSakeWithStars(input: TastedSakeInput): [TastedSake!]!
   removeTastedSake(id: Int!): [Sake!]!
 }
