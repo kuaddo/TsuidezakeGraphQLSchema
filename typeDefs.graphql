@@ -34,6 +34,12 @@ type Sake {
   region: String!
 }
 
+type UserSake {
+  sake: Sake!
+  isTasted: Boolean!
+  isWished: Boolean!
+}
+
 type Ranking {
   displayOrder: Int!
   category: String!
@@ -91,6 +97,7 @@ type Query {
   sakeList: [Sake!]
   sakes: [Sake!]
   sake(id: Int!): Sake
+  getUserSake(id: Int!): UserSake
   wishList: [Sake!]!
   tastedList: [Sake!]!
   getRankings: [Ranking!]!
