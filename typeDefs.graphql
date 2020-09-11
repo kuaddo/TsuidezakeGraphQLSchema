@@ -94,6 +94,7 @@ type Query {
   wishList: [Sake!]!
   tastedList: [Sake!]!
   getRankings: [Ranking!]!
+  getRecommendedSakes: [RankingContent!]!
   me: User
 }
 
