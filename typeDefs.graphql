@@ -80,7 +80,7 @@ input TastedSakeInput {
 
 type Tag {
   id: Int
-  name: String
+  name: String!
 }
 
 type User {
