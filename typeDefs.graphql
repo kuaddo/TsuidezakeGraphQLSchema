@@ -76,6 +76,7 @@ input SakeInput {
 }
 
 input TagInput {
+  id: Int!
   name: String!
 }
 
@@ -85,7 +86,7 @@ input TastedSakeInput {
 }
 
 type Tag {
-  id: Int
+  id: Int!
   name: String!
 }
 
