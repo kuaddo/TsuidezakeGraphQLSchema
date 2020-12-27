@@ -81,7 +81,7 @@ input TagInput {
 }
 
 input TastedSakeInput {
-  sakeid: Int!
+  sakeId: Int!
   stars: Int!
 }
 
@@ -108,9 +108,9 @@ type Query {
 
 type Mutation {
   addSake(input: SakeInput!): Sake
-  addWishSake(id: Int!): [Sake!]!
-  removeWishSake(id: Int!): [Sake!]!
-  addTastedSake(id: Int!): [Sake!]!
-  addTastedSakeWithStars(input: TastedSakeInput): [TastedSake!]!
-  removeTastedSake(id: Int!): [Sake!]!
+  addWishSake(id: Int!): UserSake!
+  removeWishSake(id: Int!): UserSake!
+  addTastedSake(id: Int!): UserSake!
+  addTastedSakeWithStars(input: TastedSakeInput!): UserSake!
+  removeTastedSake(id: Int!): UserSake!
 }
