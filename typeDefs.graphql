@@ -52,7 +52,7 @@ type RankingContent {
 }
 
 type TastedSake {
-  sakeid: Int!
+  sakeId: Int!
   stars: Int!
 }
 
