@@ -95,8 +95,6 @@ type User {
 }
 
 type Query {
-  sakeList: [Sake!]
-  sakes: [Sake!]
   sake(id: Int!): Sake
   getUserSake(id: Int!): UserSake
   wishList: [Sake!]!
