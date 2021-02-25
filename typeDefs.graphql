@@ -103,7 +103,7 @@ type Query {
   tastedList: [Sake!]!
   getRankings: [Ranking!]!
   getRecommendedSakes: [RankingContent!]!
-  me: User
+  me: User!
 }
 
 type Mutation {
